@@ -13,7 +13,7 @@
     <TargetFrameworkProfile>Client</TargetFrameworkProfile>
     <XnaFrameworkVersion>v4.0</XnaFrameworkVersion>
     <XnaPlatform>Windows</XnaPlatform>
-    <XnaProfile>Reach</XnaProfile>
+    <XnaProfile>HiDef</XnaProfile>
     <XnaCrossPlatformGroupID>770ca628-ea9e-4fce-abda-c8a10309c392</XnaCrossPlatformGroupID>
     <XnaOutputType>Game</XnaOutputType>
     <ApplicationIcon>Game.ico</ApplicationIcon>
@@ -107,19 +107,23 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Enemy.cs" />
-    <Compile Include="EnemyPathing.cs" />
-    <Compile Include="EnemyWave.cs" />
+    <Compile Include="Enemy Stuff\Enemy.cs" />
+    <Compile Include="Enemy Stuff\EnemyPathing.cs" />
+    <Compile Include="Enemy Stuff\EnemyWave.cs" />
     <Compile Include="GameState.cs" />
-    <Compile Include="LaserTower.cs" />
-    <Compile Include="Player.cs" />
-    <Compile Include="Projectile.cs" />
+    <Compile Include="Sound.cs" />
+    <Compile Include="SpriteAnimator.cs" />
+    <Compile Include="Tower Stuff\LaserTower.cs" />
+    <Compile Include="GUI stuff\MenuBar.cs" />
+    <Compile Include="Tower Stuff\Player.cs" />
+    <Compile Include="Tower Stuff\Projectile.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Game1.cs" />
     <Compile Include="Sprite.cs" />
-    <Compile Include="TileMap.cs" />
-    <Compile Include="Tower.cs" />
+    <Compile Include="GUI stuff\StartWaveButton.cs" />
+    <Compile Include="GUI stuff\TileMap.cs" />
+    <Compile Include="Tower Stuff\Tower.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Game.ico" />
