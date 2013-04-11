@@ -55,7 +55,7 @@ namespace Capstone_Project
                                 Color.White, 
                                 enemy.getSpriteTurn, 
                                 new Vector2((54/2), (54/2)), 
-                                .7f, 
+                                1f, 
                                 SpriteEffects.None, 
                                 0);
 

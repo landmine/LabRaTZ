@@ -64,12 +64,14 @@ namespace Capstone_Project
                 if (!withinRadius(projectile.getCenter))
                     projectile.RemoveProjectile();
 
+                //take enemy damage
                 if (targetEnemy != null && Vector2.Distance(projectile.getCenter, targetEnemy.getCenter) < 30)
                 {
                     targetEnemy.getPresentHealth -= projectile.Damage;
                     projectile.RemoveProjectile();
                 }
 
+                //remove projectile
                 if (projectile.projectileGone())
                 {
                     projectileList.Remove(projectile);
