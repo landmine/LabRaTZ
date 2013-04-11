@@ -55,7 +55,11 @@ namespace Capstone_Project
                                 Color.White, 
                                 enemy.getSpriteTurn, 
                                 new Vector2((54/2), (54/2)), 
+<<<<<<< HEAD
                                 1f,   // scaling of enemy
+=======
+                                1f, 
+>>>>>>> Brandon's-Branch
                                 SpriteEffects.None, 
                                 0);
 
