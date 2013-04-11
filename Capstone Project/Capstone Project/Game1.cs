@@ -21,6 +21,7 @@ namespace Capstone_Project
         EnemyWave enemyWave;
         Player player;
         Texture2D radiusTexture;
+        Texture2D hoverTexture;
 
         Texture2D sideBar;
         MenuBar menuBar;
@@ -96,6 +97,9 @@ namespace Capstone_Project
             //Fire Radius
             radiusTexture = Content.Load<Texture2D>("images/radius");
 
+            //Hover Tile Indicator
+            hoverTexture = Content.Load<Texture2D>("images/test");
+
             //tower content
             Texture2D towerTexture = Content.Load<Texture2D>("images/tower");
             Texture2D projectileTexture = Content.Load<Texture2D>("images/laser");
@@ -118,7 +122,7 @@ namespace Capstone_Project
             startWaveButton = new StartWaveButton(startButton, buttonPosition, Color.White);
 
             //player content
-            player = new Player(tileMap, towerTexture, projectileTexture, radiusTexture, startWaveButton, hitpointBar, hitpointBarPosition);
+            player = new Player(tileMap, towerTexture, projectileTexture, radiusTexture, hoverTexture, startWaveButton, hitpointBar, hitpointBarPosition);
 
             //bunny spriteSheet
             Texture2D bunnySheet = Content.Load<Texture2D>("images/bunnySheet");

@@ -22,7 +22,9 @@ namespace Capstone_Project
         int money = 30;
         protected LaserTower laserTower;
         Texture2D radiusTexture;
+        Texture2D hoverTexture;
         Rectangle radiusRect;
+        Rectangle hoverRect;
         bool isRadiusOn = false;
         int maxHitPoints;
         float currentHitPoints;
@@ -44,7 +46,8 @@ namespace Capstone_Project
         public Player(TileMap tileMap, 
                       Texture2D towerTexture, 
                       Texture2D projectileTexture, 
-                      Texture2D radiusTexture, 
+                      Texture2D radiusTexture,
+                      Texture2D hoverTexture,
                       StartWaveButton startWaveButton,
                       Texture2D hitpointBar,
                       Vector2 hitpointBarPosition)
@@ -53,6 +56,7 @@ namespace Capstone_Project
             this.towerTexture = towerTexture;
             this.projectileTexture = projectileTexture;
             this.radiusTexture = radiusTexture;
+            this.hoverTexture = hoverTexture;
             this.startWaveButton = startWaveButton;
             this.maxHitPoints = 100;
             this.currentHitPoints = maxHitPoints;
@@ -112,6 +116,8 @@ namespace Capstone_Project
             y = (int)(mouseState.Y / tileMap.getTileSize);
             tileX = (x * tileMap.getTileSize);
             tileY = (y * tileMap.getTileSize);
+
+            hoverRect = new Rectangle(tileX, tileY, tileMap.getTileSize, tileMap.getTileSize);
 
             //lays a tower if single clicked but not held down
             if (mouseState.LeftButton == ButtonState.Released
@@ -201,6 +207,11 @@ namespace Capstone_Project
             foreach (Tower tower in towerList)
             {
                 tower.Draw(spriteBatch);
+            }
+
+            if (!(x < 0 || x > tileMap.getArrayWidth - 1 || y < 0 || y > tileMap.getArrayHeight - 1))
+            {
+                spriteBatch.Draw(hoverTexture, hoverRect, Color.White);
             }
  
             spriteBatch.Draw(radiusTexture, radiusRect, Color.White);
